@@ -9,7 +9,7 @@
     margin-top: 20px;
 
     &::before{
-    @include h2-before-package("../../image/menu-icon.png");
+    @include h2-before-package("menu-icon.png");
   }
 }
 
@@ -20,7 +20,7 @@
 .keyvisual{
   width:100%;
   height:650px;
-  background-image:url("../../image/keyvisual4.png");
+  background-image:url("keyvisual4.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -109,7 +109,7 @@
     @include h2-package;
 
   &::before {
-    @include h2-before-package("../../image/news-icon.png");
+    @include h2-before-package("news-icon.png");
   }
   }
   }
@@ -209,7 +209,7 @@
     margin: 10px auto;
 
   &::before{
-  @include h2-before-package("../../image/contact.png");
+  @include h2-before-package("contact.png");
   }
  }
   p {
