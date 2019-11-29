@@ -1,0 +1,173 @@
+
+.details-container {
+  width:100%;
+  padding: 100px 100px 150px 100px;
+}
+
+.details-content {
+  margin-bottom: 100px;
+  text-align: center;
+
+ h2 {
+  @include info-access-h2;
+  width:70%;
+ }
+}
+
+.details-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.details-image {
+  flex:0 0 50%;
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+.details-text {
+  flex:0 0 50%;
+  span {
+    font-size:13px;
+    letter-spacing: 1px;
+  }
+  p:nth-child(2) {
+    margin-top: 40px;
+  }
+  p:nth-child(3) {
+    margin: 30px 0 50px 0;
+
+  }
+}
+
+.important {
+  padding-bottom: 3px;
+  border-bottom:1px solid rgba(#b3b3b3, 0.9);
+  width:70%;
+  font-weight: bold;
+}
+
+.discription{
+  font-weight: bold;
+  &::before{
+    content:"";
+    position: relative;
+    top:8px;
+    display: inline-block;
+    width:7px;
+    height:30px;
+    background-color: rgba(#c10202, 1);
+    margin-right: 5px;
+}
+}
+
+.important-container {
+  margin-bottom: 100px;
+}
+
+@media (max-width:823px){
+  .details-container {
+    padding: 50px 50px 100px 50px;
+  }
+
+  .details-image img{
+    width:220px;
+    height: 190px;
+  }
+
+  .details-text {
+    font-size: 14px;
+  span {
+    font-size: 10px;
+  }
+  }
+  .details-text p:nth-child(2) {
+    margin-top: 30px;
+  }
+  .details-text p:nth-child(3) {
+    margin: 20px 0 30px 0;
+  }
+
+  .important-container {
+    margin-bottom: 70px;
+  }
+}
+
+@media(max-width:568px){
+
+  .details-container {
+    padding-top:20px;
+    padding-bottom:80px;
+  }
+  .details-content {
+    margin-bottom:50px;
+  h2 {
+    font-size:16px;
+  }
+  }
+
+  .details-image img{
+    width:180px;
+    height: 150px;
+  }
+
+  .details-text {
+    font-size: 10px;
+  }
+  .important {
+    width:90%;
+  }
+  .discription::before {
+    width:4px;
+    height: 20px;
+    top:5px;
+  }
+}
+
+@media(max-width:414px){
+
+  .details-container {
+    padding:20px 20px 50px 20px;
+  }
+  .details-image img{
+    width:140px;
+    height: 120px;
+  }
+}
+
+@media (max-width:375px){
+  .details-container {
+    padding:20px 10px 50px 10px;
+  }
+  .details-content {
+    margin-bottom: 30px;
+    h2 {
+    font-size:12px;
+  }
+ }
+  .details-image img{
+    width:120px;
+    height: 100px;
+    margin-left: 5px;
+  }
+  .details-text p:nth-child(3){
+    margin-left: -15px;
+  }
+  .important {
+    transform:scale(0.9);
+    margin-left: -15px;
+    width:100%;
+    width:170px;
+  }
+  .discription {
+    margin-left: -15px;
+    transform:scale(0.9);
+  }
+  .details-text p:nth-child(2){
+    margin-top: 15px;
+  }
+}

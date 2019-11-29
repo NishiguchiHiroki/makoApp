@@ -57,6 +57,15 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 
+## informationテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|title|string|null: false|
+|content|text|null: false|
+|image|text||
+
+
 ## boxlunchsテーブル
 
 |Column|Type|Options|

@@ -1,0 +1,62 @@
+
+  <div class="main-container">
+    <div class="keyvisual"></div>
+  </div>
+
+<main>
+  <div class="menu-container">
+    <h2>Menus</h2>
+    <%= render 'menu-contents' %>
+  </div>
+    <div class="show-all">
+    <p><a href="./menu.php">一覧で見る</a></p>
+   </div>
+</main>
+
+  <%= render 'aside' %>
+
+<section>
+  <div class="news-page">
+　　<h2>News</h2>
+　<div class="news-container">
+     <p class="date"><span>2019.00.00</span><span class="cat">News</span></p>
+     <h3 class="tit">新しいメニューを追加しました。</h3>
+     <p class="date"><span>2019.00.00</span><span class="cat">News</span></p>
+     <h3 class="tit">値段の改正を行いました。</h3>
+     <p class="date"><span>2019.00.00</span><span class="cat">News</span></p>
+     <h3 class="tit">メディアに記載されました。</h3>
+     <p class="date"><span>2019.00.00</span><span class="cat">News</span></p>
+     <h3 class="tit">値段の改正を行いました。</h3>
+     <p class="date"><span>2019.00.00</span><span class="cat">News</span></p>
+     <h3 class="tit">メディアに記載されました。</h3>
+　</div>
+  <div class="show-all">
+  <p><a href="./information.php">一覧で見る</a></p>
+　</div>
+  </div>
+</section>
+
+
+  <div class="contact-form" id="contact-form">
+    <div class="input-container">
+      <h2>Contact form</h2>
+      <p>お問い合わせ内容をご記入ください</p>
+    </div>
+   <form class="form" action="index.html" method="post">
+    <div class="contact-container">
+      <dl>
+        <dt><span class="required">お名前 :</span></dt>
+        <dd><input type="text" name="name" class="name required"></dd>
+
+        <dt><span class="required">メールアドレス :</span></dt>
+        <dd><input type="email" name="email" class="email required"></dd>
+
+        <dt>お問い合わせ内容 :</dt>
+        <dd><textarea name="message" id="message" ></textarea></dd>
+      </dl>
+     </div>
+     <div class="attention">
+				<button type="submit" class="btn" name="送信" value="値">確認する</button>
+			</div>
+    </form>
+   </div>

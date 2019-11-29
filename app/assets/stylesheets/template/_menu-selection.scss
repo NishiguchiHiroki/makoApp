@@ -1,0 +1,290 @@
+
+@import "_main-color.scss";
+
+/*   ---menu-selectionの始まり--- */
+
+.menu-selection {
+  max-width: 100%;
+}
+
+.menu-page {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 0 auto;
+  max-width: 450px;
+}
+
+.main-menu {
+  padding:20px 20px 40px 20px;
+  background-color: rgba(255, 228, 181, 0.3);
+}
+
+.single-menu {
+  text-align: center;
+  padding:20px 25px 40px 25px;
+  margin: 0 40px 0 40px;
+
+  &:hover {
+    background-color: rgba(255, 228, 181, 0.3);
+    box-shadow: 0 0 2px 2px rgba(186, 186, 186, 0.1);
+    z-index: 1;
+  }
+}
+
+.drink-menu {
+  padding:20px 20px 40px 20px;
+  margin-right: 40px;
+
+  &:hover {
+    background-color: rgba(255, 228, 181, 0.3);
+    box-shadow: 0 0 2px 2px rgba(186, 186, 186, 0.1);
+    z-index: 1;
+  }
+}
+
+.reservation-menu {
+  padding:30px 25px 40px 20px;
+  margin-right: -10px;
+
+  &:hover {
+    background-color: rgba(255, 228, 181, 0.3);
+    box-shadow: 0 0 2px 2px rgba(186, 186, 186, 0.1);
+    z-index: 1;
+  }
+}
+
+.text-box {
+  position: relative;
+  text-align: center;
+  bottom:40px;
+  border-top:2px solid #676666;
+  max-width:550px;
+  margin: 0 auto 0 auto;
+  padding: 7px 0 0 10px;
+  z-index: 0;
+
+
+  p{
+  display: inline-block;
+  font-size:10px;
+  font-weight: bold;
+  color:rgba(181, 209, 13, 0.8);
+  line-height:1.3;
+
+  &:nth-child(2){
+    margin: 0 60px 0 45px;
+  }
+
+  &:nth-child(3){
+    margin-right: 65px;
+  }
+}
+}
+
+/*   ---menu-selectionの終わり--- */
+
+
+
+/*  ---image-boxの始まり--- */
+
+.image-box {
+  position: fixed;
+  right:0;
+  top:335px;
+  height: auto;
+  width:50px;
+  border-top: 1px solid #676666;
+  border-bottom: 1px solid #676666;
+  border-left: 2px solid rgba(181, 209, 13, 0.8);
+
+img{
+    display: block;
+&:hover {
+      background-color: rgba(255, 228, 181, 0.3);
+    }
+  }
+}
+.main-image {
+  @include image-box(15px 0 0 10px);
+}
+
+.single-box {
+  @include image-box;
+}
+
+.drink-box {
+  @include image-box;
+}
+
+.reservation-box {
+  @include image-box(10px 0 0 5px);
+}
+
+@media(min-width:667px) and (max-width:823px){
+  .image-box {
+    top:170px;
+  }
+}
+
+@media(min-width:568px) and (max-width:640px){
+  .image-box {
+    top:120px;
+    width:40px;
+  }
+
+  .text-box {
+    width:450px;
+  }
+}
+
+
+/*  ---image-boxの終わり--- */
+
+
+
+@media (max-width:768px) {
+
+.menu-page img {
+  width:40px;
+}
+.single-menu {
+  margin: 0;
+}
+.drink-menu {
+  margin: 0;
+}
+.reservation-menu img{
+  width:60px;
+}
+}
+
+@media (max-width:400px){
+  .menu-page img {
+    width:30px;
+  }
+  .reservation-menu img{
+    width:40px;
+    height:25px;
+    margin-top: -5px;
+  }
+}
+
+
+@media (max-width:768px){
+ .text-box {
+   p {
+   &:first-child{
+     margin:0 0 0 20px ;
+   }
+   &:nth-child(2){
+     margin: 0 10px 0 0;
+   }
+   &:nth-child(3){
+     margin: 0 0 0 0;
+   }
+   &:last-child{
+     margin:0 10px 0 20px;
+   }
+ }
+}
+}
+
+@media (max-width:375px){
+  .image-box {
+    top:270px;
+    width:40px;
+    img {
+      width:25px;
+    }
+  }
+  .reservation-box img {
+    width:35px;
+  }
+  .text-box {
+    p {
+      transform: scale(0.8);
+
+    &:first-child{
+      position: absolute;
+      left:40px;
+      margin:0;
+    }
+    &:nth-child(2){
+      position: absolute;
+      left:105px;
+      margin: 0;
+    }
+    &:nth-child(3){
+      position: absolute;
+      left:200px;
+      margin: 0;
+    }
+    &:last-child{
+      position: absolute;
+      left:255px;
+      margin: 0;
+    }
+  }
+  }
+}
+
+@media (max-width:360px){
+  .text-box {
+    p {
+      transform: scale(0.8);
+
+    &:first-child{
+      position: absolute;
+      left:30px;
+      margin:0;
+    }
+    &:nth-child(2){
+      position: absolute;
+      left:100px;
+      margin: 0;
+    }
+    &:nth-child(3){
+      position: absolute;
+      left:195px;
+      margin: 0;
+    }
+    &:last-child{
+      position: absolute;
+      left:250px;
+      margin: 0;
+    }
+  }
+  }
+}
+
+@media (max-width:320px){
+.text-box {
+  p {
+    transform: scale(0.8);
+
+  &:first-child{
+    position: absolute;
+    left:10px;
+    margin:0;
+  }
+  &:nth-child(2){
+    position: absolute;
+    left:80px;
+    margin: 0;
+  }
+  &:nth-child(3){
+    position: absolute;
+    left:175px;
+    margin: 0;
+  }
+  &:last-child{
+    position: absolute;
+    left:235px;
+    margin: 0;
+  }
+}
+}
+
+}
+
+/*  ---menu-selectionの終わり--- */

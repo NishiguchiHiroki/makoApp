@@ -1,0 +1,77 @@
+
+$concept-color:#FF7600;
+$concept-color-op:rgba(255,118,0,0.8);
+$main-background-color:rgba(255, 148, 57,0.2);
+
+@mixin show-all {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:130px;
+  height:35px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-size:16px;
+  border: 1px solid rgba(0,0,0,0.3);
+  background-color: #7d2d00;
+  color:#fff;
+  border-radius:35px;
+}
+
+@mixin show-all-hover {
+  opacity:0.9;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0,0.4);
+}
+
+@mixin h2-package {
+  width:40%;
+  text-align:center;
+  margin: 20px auto 100px auto;
+  font-size:20px;
+  font-family: Le Monde Livre Classic Std;
+  padding-bottom:10px;
+  border-bottom:2px solid #7d2d00;
+
+}
+
+@mixin h2-before-package($image) {
+  content:"";
+  display: inline-block;
+  vertical-align:baseline;
+  background-size:cover;
+  width:40px;
+  height:40px;
+  margin-right: 5px;
+  background-image: url($image);
+}
+
+@mixin aside-container-style {
+  margin:0 90px;
+  background-color: #fcfcfc;
+  border: 1px solid #000;
+}
+
+@mixin aside-p-style {
+  width:100%;
+  height:auto;
+  padding:0 0 30px 100px;
+}
+
+@mixin info-access-h2 {
+  margin: 0 auto;
+  padding-bottom: 5px;
+  width:30%;
+  font-size:20px;
+  border-bottom: 2px solid rgba(#b3b3b3, 0.9);
+  font-family: Le Monde Livre Classic Std;
+}
+
+@mixin image-box($value:10px 0 0 10px) {
+  padding: $value;
+  width: 50px;
+  height: 50px;
+
+  &:hover {
+    background-color: rgba(255, 228, 181, 0.3);
+  }
+}

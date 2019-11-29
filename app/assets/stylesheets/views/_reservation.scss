@@ -1,0 +1,89 @@
+
+
+.menu-package {
+  margin: 0 30px;
+}
+  h2 {
+    @include h2-package;
+    border-bottom: none;
+    margin-top: 20px;
+
+    &::before{
+    @include h2-before-package("../../image/reservation-menu.png");
+    width:90px;
+    height: 40px;
+    transform: scale(0.8);
+  }
+}
+
+
+/*  ---menu-selection書き換えの始まり--- */
+
+.main-menu {
+  background-color: transparent;
+
+&:hover {
+  background-color: rgba(255, 228, 181, 0.3);
+  box-shadow: 0 0 2px 2px rgba(186, 186, 186, 0.1);
+  z-index: 1;
+}
+}
+
+.reservation-menu {
+  background-color: rgba(255, 228, 181, 0.3);
+}
+
+/*  ---menu-selection書き換えの終わり--- */
+
+/*  ---menu-containerの始まり--- */
+
+.menu-container {
+  margin-bottom: 70px;
+}
+
+/*  ---menu-containerの終わり--- */
+
+
+/*  ---image-boxの始まり--- */
+
+.image-box {
+  position: fixed;
+  right:0;
+  top:335px;
+  height: auto;
+  width:50px;
+  border-top: 1px solid #676666;
+  border-bottom: 1px solid #676666;
+  border-left: 2px solid rgba(181, 209, 13, 0.8);
+
+img{
+    display: block;
+&:hover {
+      background-color: rgba(255, 228, 181, 0.3);
+    }
+  }
+}
+.main-image {
+  @include image-box(15px 0 0 10px);
+}
+
+.single-box {
+  @include image-box;
+}
+
+.drink-box {
+  @include image-box;
+}
+
+.reservation-box {
+  @include image-box(10px 0 0 5px);
+}
+
+/*  ---image-boxの終わり--- */
+
+
+/*  ---asideの始まり--- */
+
+.important-container {
+  margin-bottom: 100px;
+}

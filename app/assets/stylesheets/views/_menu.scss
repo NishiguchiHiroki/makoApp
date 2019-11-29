@@ -1,0 +1,37 @@
+
+
+
+/*  ---template書き換えの始まり--- */
+
+.menu-package {
+  margin: 0 30px;
+}
+  h2 {
+    @include h2-package;
+    border-bottom: none;
+    margin-top: 20px;
+
+    &::before{
+    @include h2-before-package("../../image/main-menu.png");
+  }
+}
+
+/*  ---template書き換えの終わり--- */
+
+
+
+/*  ---menu-containerの始まり--- */
+
+.menu-container {
+  margin-bottom: 70px;
+}
+
+/*  ---menu-containerの終わり--- */
+
+
+
+/*  ---asideの始まり--- */
+
+.important-container {
+  margin-bottom: 100px;
+}

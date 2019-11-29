@@ -1,0 +1,209 @@
+
+@import "_main-color.scss";
+/* ---naviの始まり--- */
+
+.navi-container{
+  width:100%;
+  height:auto;
+  background-color:#ff9032;
+  opacity:0.9;
+  z-index: 10;
+  text-align: center;
+
+   li {
+     display: inline-block;
+
+   a {
+     display: block;
+     max-width: 210px;
+     padding:10px 50px 10px 50px;
+     margin-left: -7px;
+     line-height: 1.4;
+     border-left:1px solid rgba(255,255,255,0.6);
+
+    &:hover {
+      box-shadow: 0 -3px 0 0 #dddddd inset;
+      color:rgba(255, 255, 255,0.7);
+      background-color: rgba(252, 161, 76,0.7);
+    }
+    }
+    &:last-child {
+      border-right:1px solid rgba(255,255,255,0.5);
+    }
+    }
+    a{
+      color:rgba(255,255,255,0.9);
+      font-size: 14px;
+  }
+}
+
+
+
+@media (max-width:823px){
+
+
+  .navigaition {
+  position: fixed;
+  z-index: 9999;
+  right: 20px;
+  top: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #e9e9e9;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16);
+  }
+
+  .navi-container {
+  position: fixed;
+  right: -320px;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  padding-top: 60px;
+  background-color: #fff;
+  transition: all .6s;
+  z-index: 1000;
+  overflow-y: auto;
+  }
+  .global-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.global-nav__item {
+  text-align: center;
+  padding: 10px 24px;
+}
+.global-nav__item a {
+  display: block;
+  padding: 15px 10px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #111;
+}
+.global-nav__item a:hover {
+  background-color: #eee;
+}
+
+  .hamburger-menu {
+  right: 0;
+  top: 0;
+  width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+  height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+  cursor: pointer;
+  z-index: 300;
+
+  .hamburger__line {
+   position: absolute;
+   left: 6px;
+   width: 18px;
+   height: 2px;
+   background-color: #111;
+   transition: all .6s;
+   }
+
+   .hamburger-menu1 {
+     top: 14px;
+   }
+
+   .hamburger-menu2 {
+     top: 20px;
+   }
+
+   .hamburger-menu3 {
+     top: 26px;
+
+    &::after {
+      position: absolute;
+      top:6px;
+      left:-10px;
+      content:"メニュー";
+      display: inline-block;
+      font-size: 2px;
+      width:50px;
+      letter-spacing: 0;
+
+    }
+   }
+  }
+  .black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s;
+  cursor: pointer;
+  }
+
+.nav-open .navi-container {
+  right: 0;
+  z-index: 200;
+}
+.nav-open .black-bg {
+  opacity: .8;
+  visibility: visible;
+}
+.nav-open .hamburger__line--1 {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.nav-open .hamburger__line--2 {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger__line--3 {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+  }
+
+@media (max-width:767px){
+  .navigaition {
+    top: 48px;
+  }
+}
+
+@media (max-width:568px){
+  .navigaition {
+    top:15px;
+    right:30px;
+  }
+}
+
+@media (max-width:414px){
+  .navigaition {
+    top:10px;
+    right:10px;
+    width:40px;
+    height:40px;
+  }
+
+  .navi-container {
+    width:220px;
+
+    a{
+      font-size: 10px;
+    }
+  }
+
+  .hamburger-menu{
+
+  .hamburger-menu3::after {
+    display: none;
+  }
+  .hamburger__line {
+    left:10px;
+}
+  }
+}
+
+@media(max-width:320px){
+
+}
+
+/* ---naviの終わり--- */
