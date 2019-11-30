@@ -6,7 +6,7 @@
 <main>
   <div class="menu-container">
     <h2>Menus</h2>
-    <%= render 'menu-contents' %>
+    <%= render partial:'menu_contents',locals: {menu: @menus} %>
   </div>
     <div class="show-all">
     <p><a href="./menu.php">一覧で見る</a></p>
