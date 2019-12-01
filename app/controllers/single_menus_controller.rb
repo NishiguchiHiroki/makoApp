@@ -1,5 +1,5 @@
 class SingleMenusController < ApplicationController
   def index
-    @single_menus = Single_menu.all
+    @single_menus = SingleMenu.all
   end
 end
