@@ -1,0 +1,2 @@
+module BoxlunchesHelper
+end

@@ -45,11 +45,11 @@
   <div class="navigaition">
      <div class="navi-container">
       <ul class="global-nav__list">
-      <li class="global-nav__item"><a href="#">TOP<br><span>トップページ</span></a></li>
-      <li class="global-nav__item"><a href="menu.php">MENU<br><span>メニュー</span></a></li>
-      <li class="global-nav__item"><a href="information.php">INFORMATION<br><span>ニュース</span></a></li>
-      <li class="global-nav__item"><a href="access.php">ACCESS<br><span>アクセス</span></a></li>
-      <li class="global-nav__item"><a href="./index.php#contact-form">CONTACT<br><span>お問い合わせ</span></a></li>
+      <li class="global-nav__item"><%= link_to root_path do %><span>TOP</span><br><span>トップページ</span><% end %></li>
+      <li class="global-nav__item"><%= link_to menu_boxlunches_path(1) do %><span>MENU</span><br><span>メニュー</span><% end %></li>
+      <li class="global-nav__item"><%= link_to  do %><span>INFORMATION</span><br><span>ニュース</span><% end %></li>
+      <li class="global-nav__item"><%= link_to  do %><span>ACCESS</span><br><span>アクセス</span><% end %></li>
+      <li class="global-nav__item"><%= link_to root_path(anchor: "contact-form") do %><span>CONTACT</span><br><span>お問い合わせ</span><% end %></li>
       </ul>
      </div>
 

@@ -3,7 +3,7 @@
    <form action="" method="post" >
      <div class="menu-package">
        <div class="menu-image">
-         <a href="./details.php"><%= image_tag menu.image, width:"200px", height:"150px"%></a>
+         <%= image_tag menu.image ,width:"200px", height:"150px"%>
          <h4><%= link_to "#{menu.name}" %></h4>
        <div class="count-price-container">
          <div class="count-price">
@@ -11,7 +11,13 @@
              <p>￥500<span>(税込)</span></p>
            </div>
          <div class="count">
-           <select name=""></select>
+           <label>
+             <select name="">
+               <% for count in 0..10 do%>
+                 <option value="#{count}"><%= count %></option>
+               <% end %>
+             </select>
+           </label>
          </div>
        </div>
        <input type="submit" value="カートの中に入れる">

@@ -1,6 +1,6 @@
-class CreateBoxlunches < ActiveRecord::Migration[5.2]
+class CreateReservations < ActiveRecord::Migration[5.2]
   def change
-    create_table :boxlunches do |t|
+    create_table :reservations do |t|
       t.string :name, null: false
       t.integer :price,null: false
       t.text :image,null: false

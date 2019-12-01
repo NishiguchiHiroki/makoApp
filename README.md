@@ -71,12 +71,12 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|name|string|null: false,unique: true|
+|name|string|null: false|
 |price|integer|null: false|
 |image|text|null: false|
-|Allergies|string||
-|Description|varchar(255)|null:false|
-|food|text|null:false|
+|allergy|string||
+|description|varchar(255)|null:false|
+|ingredient|text|null:false|
 
 ### Association
 - has_many :users_menus
@@ -87,12 +87,12 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|name|string|null: false,unique: true|
+|name|string|null: false|
 |price|integer|null: false|
 |image|text|null: false|
-|Allergies|string||
-|Description|varchar(255)|null:false|
-|food|text|null:false|
+|allergy|string||
+|description|varchar(255)|null:false|
+|ingredient|text|null:false|
 
 ### Association
 - has_many :users_menus
@@ -103,10 +103,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|name|string|null: false,unique: true|
+|name|string|null: false|
 |price|integer|null: false|
 |image|text|null: false|
-|Description|varchar(255)|null:false|
+|description|varchar(255)|null:false|
 
 ### Association
 - has_many :users_menus
@@ -117,12 +117,12 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|name|string|null: false,unique: true|
+|name|string|null: false|
 |price|integer|null: false|
 |image|text|null: false|
-|Allergies|string||
-|Description|varchar(255)|null:false|
-|food|text|null:false|
+|allergy|string||
+|description|varchar(255)|null:false|
+|ingredient|text|null:false|
 
 ### Association
 - has_many :users_menus

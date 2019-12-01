@@ -1,0 +1,35 @@
+
+<%= render "template/menu_selections" %>
+  <div class="menu-container">
+    <h2>Single Menu</h2>
+<div class="menu-contents">
+  <% @boxlunches.each do |boxlunch| %>
+    <form action="" method="post" >
+  <div class="menu-package">
+  <div class="menu-image">
+    <%= link_to "boxlunch/#{boxlunch.id}" do%><%= image_tag boxlunch.image, width:"200px", height:"150px" %><% end %>
+      <h4><%= link_to do%><%= boxlunch.name %><% end %></h4>
+   <div class="count-price-container">
+     <div class="count-price">
+       <div class="price">
+         <p>¥<%= boxlunch.price %><span>(税込)</span></p>
+       </div>
+       <div class="count">
+         <label>
+         <select name="">
+           <% for count in 0..10 do%>
+                 <option value="#{count}"><%= count %></option>
+               <% end %>
+         </select>
+         </label>
+      </div>
+    </div>
+      <input type="submit" value="カートの中に入れる">
+   </div>
+  </div>
+</div>
+</form>
+<% end %>
+
+</div>
+</div>

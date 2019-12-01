@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_30_074630) do
+ActiveRecord::Schema.define(version: 2019_12_01_024654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,46 @@ ActiveRecord::Schema.define(version: 2019_11_30_074630) do
     t.string "name", null: false
     t.integer "price", null: false
     t.text "image", null: false
-    t.string "allergies"
-    t.text "description", null: false
-    t.text "food", null: false
+    t.string "allergy"
+    t.string "description", null: false
+    t.text "ingredient", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "drink_menus", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "image", null: false
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "image", null: false
+    t.string "allergy"
+    t.string "description", null: false
+    t.text "ingredient", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "single_menus", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "image", null: false
+    t.string "allergy"
+    t.string "description", null: false
+    t.text "ingredient", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -35,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_11_30_074630) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["name"], name: "index_users_on_name"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
