@@ -27,14 +27,14 @@
         <a href="tel:+81-80-6179-2524">電話注文 ▷</a>
       </div>
       <div class="sp-phone">
-        <a href="tel:+81-80-6179-2524"><%= image_tag '/images/sp-phone.png', alt:'order-coll', width:'50px'%></a>
+        <%= link_to tel:"+81-80-6179-2524" do %><%= image_tag '/images/sp-phone.png', alt:'order-coll', width:'50px'%><% end %>
       </div>
 
       <div class="order-menu">
-        <a href="settlement.php">注文受付 ▷</a>
+        <%= link_to "注文受付 ▷" %>
       </div>
       <div class="sp-menu">
-        <a href="settlement.php"><%= image_tag '/images/sp-money.png', alt:'order-coll', width:'50px'%></a>
+        <%= link_to do %><%= image_tag '/images/sp-money.png', alt:'order-coll', width:'50px'%><% end %>
       </div>
     </div>
     </div>
