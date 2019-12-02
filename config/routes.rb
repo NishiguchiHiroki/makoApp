@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :single_menus, only: [:index, :show]
   resources :drink_menus, only: [:index, :show]
   resources :reservations, only: [:index, :show]
+  resources :information, only: :index
+  resources :accesses, only: :index
 end

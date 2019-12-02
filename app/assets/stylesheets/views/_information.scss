@@ -13,6 +13,10 @@
  }
 }
 
+.news-contents{
+  margin-bottom:100px;
+}
+
 .news-text-box {
   display: flex;
   justify-content: space-between;
@@ -38,8 +42,9 @@
     bottom:-5px;
     display: block;
     height:1px;
+    background:linear-gradient(left, #c6c6c6 10%, #2f2f2f);
+    background:-webkit-linear-gradient(left, #c6c6c6 10%, #2f2f2f);
     max-width:800px;
-    background: linear-gradient(left, #c6c6c6 10%, #2f2f2f);
   }
   }
   p {

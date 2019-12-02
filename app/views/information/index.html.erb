@@ -1,0 +1,30 @@
+
+<div class="information-container">
+  <div class="information-content">
+    <div class="information-name">
+      <h2>INFORMATION</h2>
+    </div>
+  <% @information.each do |event|%>
+  <div class="news_container">
+    <div class="news-contents">
+      <div class="news-text-box">
+      <div class="section-container">
+        <h3 class="news-section"><%= event.title %></h3>
+        <p class="detail"><%= event.content %></p>
+      </div>
+
+      <div class="news-image-box">
+        <%= image_tag event.image, alt:"catch", name:"catch-image", width:"200px", height:"150px" %>
+      </div>
+      </div>
+    </div>
+
+  </div>
+      <% end %>
+  </div>
+</div>
+
+<div class="home-btn">
+  <a href="menu.php"><button type="button" name="home-btn" value="値">メニューに戻る</button></a>
+</div>
+
