@@ -109,7 +109,7 @@
     @include h2-package;
 
   &::before {
-    @include h2-before-package(<%= asset-path("news-icon.png") %>);
+    @include h2-before-package("news-icon.png");
   }
   }
   }
