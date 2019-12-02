@@ -1,18 +1,18 @@
 <footer>
   <div class="sns-container">
     <ul>
-      <li><a href=""><%= image_tag "facebook.png", alt: "facebook", width: "40px" %></a></li>
-      <li><a href=""><%= image_tag "twitter.png", alt: "twitter", width: "40px" %></a></li>
-      <li><a href=""><%= image_tag "Instagram.png", alt: "instagram", width: "40px" %></a></li>
+      <li><%= link_to do%><%= image_tag "/images/facebook.png", alt: "facebook", width: "40px" %><% end %></li>
+      <li><%= link_to do%><%= image_tag "/images/twitter.png", alt: "twitter", width: "40px" %><% end %></li>
+      <li><%= link_to do%><%= image_tag "/images/Instagram.png", alt: "instagram", width: "40px" %><% end %></li>
     </ul>
   </div>
   <section>
     <div class="customer">
       <ul>
-        <li><a href="#">▷ご意見・ご要望</a></li>
-        <li><a href="#">▷お客様の声</a></li>
-        <li><a href="#">▷特定商取引に基づく表記</a></li>
-        <li><a href="#">▷個人情報の取扱について</a></li>
+        <li><%= link_to do%>▷ご意見・ご要望<% end %></li>
+        <li><%= link_to do%>▷お客様の声<% end %></li>
+        <li><%= link_to do%>▷特定商取引に基づく表記<% end %></li>
+        <li><%= link_to do%>▷個人情報の取扱について<% end %></li>
       </ul>
     </div>
   </section>
