@@ -14,13 +14,25 @@
  */
 
 
-// @import "font-awesome-sprockets";
-// @import "font-awesome";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "template/reset";
 @import "template/header";
 @import "template/navi";
 @import "template/aside";
 @import "template/footer";
+
+
+// signupの始まり---------------------
+
+@import "signup/signup_progress";
+@import "signup/signup_step1";
+@import "signup/signup_step2";
+@import "signup/signup_step3";
+
+// signupの終わり---------------------
+
+
 @import "template/home-btn";
 @import "template/main-color";
 @import "template/menu-contents";

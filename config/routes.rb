@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
+  
+  resources :signup do
+    collection do
+      get 'step1'
+      get 'step2'
+      post 'step2'
+      get 'step3'
+      post 'step3'
+      get 'done'
+      post 'done'
+    end
+  end
 
   root "menus#index"
   resources :menus, only: [:index, :show] do

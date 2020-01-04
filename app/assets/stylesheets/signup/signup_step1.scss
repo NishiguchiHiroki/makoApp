@@ -1,0 +1,32 @@
+// Place all the styles related to the signup controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signup-step1 {
+  margin:50px auto 0 auto;
+}
+
+.register-head  {
+  width:70%;
+  max-width:1960px;
+  height:50px;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f5f5f5;
+  z-index: 10;
+  h3 {
+    color:#000;
+    font-weight: 600;
+  }
+}
+
+.register-form-1st {
+  width:70%;
+  max-width:1960px;
+  height:100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f5f5f5;
+  z-index: 10;
+}
