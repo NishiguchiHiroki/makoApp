@@ -1,0 +1,15 @@
+.signup-header
+  .signup-step1
+    = render "signup-header"
+  .single-main
+    %p.register-head 会員登録完了
+    .register-form
+      .form
+        .end
+          %p ありがとうございます。
+          %p 会員登録が完了しました。
+      .form
+        .next-btn
+        = link_to root_path do
+          %button{type:"submit",class:"btn-red"}
+            メニューを見る
