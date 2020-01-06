@@ -1,0 +1,19 @@
+
+@mixin signup-sapn {
+  display: block;
+  font-size: 13px;
+  text-align: left;
+}
+
+@mixin signup-input($width,$font-size) {
+  width:$width;
+  height:30px;
+  font-size: $font-size;
+  letter-spacing: 2px;
+  padding-left:10px;
+  
+  &:focus {
+  outline: 0;
+  border-color: orange;
+  }
+}

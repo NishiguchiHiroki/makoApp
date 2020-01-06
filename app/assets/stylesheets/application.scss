@@ -21,7 +21,13 @@
 @import "template/navi";
 @import "template/aside";
 @import "template/footer";
+@import "template/mixin";
 
+// signinの始まり---------------------
+
+@import "signin/signin";
+
+// signupの終わり---------------------
 
 // signupの始まり---------------------
 

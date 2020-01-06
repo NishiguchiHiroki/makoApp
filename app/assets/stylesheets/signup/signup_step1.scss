@@ -2,31 +2,205 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .signup-step1 {
   margin:50px auto 0 auto;
 }
 
 .register-head  {
-  width:70%;
-  max-width:1960px;
-  height:50px;
+  width:100%;
+  max-width:1024px;
+  height:100%;
   line-height: 50px;
   margin: 0 auto;
+  padding:30px 0 0 0;
   text-align: center;
   background-color: #f5f5f5;
   z-index: 10;
   h3 {
-    color:#000;
+    max-width:768px;
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    color:#404040;
     font-weight: 600;
+    background-color: #FFEB00;
+    
+    &:before {
+      content:"";
+      display: inline-block;
+      width:0;
+      height:0;
+      border-top: 15px solid #404040;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      margin-right: 5px;
+      
+    }
   }
 }
 
 .register-form-1st {
-  width:70%;
-  max-width:1960px;
+  width:100%;
+  max-width:1024px;
   height:100%;
   margin: 0 auto;
   text-align: center;
   background-color: #f5f5f5;
   z-index: 10;
+}
+
+.form {
+  position: relative;
+  width:100%;
+  max-width:768px;
+  height:100px;
+  margin:0 auto;
+  border-bottom: 2px solid rgba(105, 105, 105, 0.2);
+
+  &__title-input {
+    text-align: left;
+    line-height: 10px;
+    width:200px;
+    padding-top: 25px;
+    span {
+      display: block;
+      font-size: 12px;
+      color:red;
+      margin-left:20px;
+    }
+
+    label:before{
+      content:"";
+      display: inline-block;
+      width:7px;
+      height:20px;
+      background-color: #FA742B;
+      margin-right: 5px;
+    }
+  }
+
+  &__input-layout {
+    display: inline-block;
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    left:20%;
+
+    span {
+      @include signup-sapn
+    }
+
+    input {
+      @include signup-input(250px,18px);
+    }
+  }
+
+  &__input-layout-back {
+    display: inline-block;
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    left:60%;
+
+    span {
+      @include signup-sapn
+    }
+
+    input {
+      @include signup-input(250px,18px);
+    }
+  }
+
+  &__input-birthday {
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    left:20%;
+    display: flex;
+    span {
+      display: block;
+      text-align: left;
+      @include signup-sapn
+    }
+    select {
+      @include signup-input(150px,14px);
+      margin-right: 50px;
+      border-radius: 0px;
+      cursor: pointer;
+    }
+  }
+
+  &__email {
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    left:20%;
+
+    input {
+      margin-top: 20px;
+      @include signup-input(550px,16px)
+    }
+  }
+  &__password {
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    left:20%;
+    span{
+    font-size:13px;
+    display: block;
+  }
+  input {
+    display:block;
+    @include signup-input(550px,16px)
+  }
+}
+ 
+ &__check {
+   display: block;
+   span {
+     font-size: 13px;
+     display: inline-block;
+     margin-top:15px;
+   }
+  }
+  .single-text {
+    margin-top: 20px;
+  }
+}
+
+.form-authentication {
+  width:100%;
+  max-width:768px;
+  height:100%;
+  margin:0 auto;
+  border-bottom: 2px solid rgba(105, 105, 105, 0.2);
+ 
+  h3 {
+    color:#404040;
+    margin: 20px 0;
+  }
+  input {
+    width:15px;
+    height:15px;
+    margin:20px 10px 20px 0 ;
+  }
+
+  .next-btn {
+    margin:10px 0 20px 0;
+
+    button {
+      padding:8px 20px;
+      cursor: pointer;
+      background-color: red;
+      color:#fff;
+
+      &:hover {
+        background-color: #fff;
+        color:red;
+        border: 1px solid red;
+      }
+    }
+  }
 }

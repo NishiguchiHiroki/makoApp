@@ -1,0 +1,14 @@
+width: 83px;
+height: 41px;
+border-radius: 20px;
+background: #fff;
+border: 1px solid #707070;
+width: 54px;
+height: 25px;
+background: transparent;
+width: 54px;
+height: 25px;
+border-radius: 12.5px;
+background: #fff;
+border: 2px solid rgba(255, 78, 0, 0.5);
+opacity: 1;
