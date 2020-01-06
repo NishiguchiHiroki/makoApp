@@ -50,7 +50,7 @@
   z-index: 10;
 }
 
-.form {
+.step1-form {
   position: relative;
   width:100%;
   max-width:768px;
@@ -170,7 +170,7 @@
   }
 }
 
-.form-authentication {
+.step1-form-authentication {
   width:100%;
   max-width:768px;
   height:100%;
@@ -190,7 +190,7 @@
   .next-btn {
     margin:10px 0 20px 0;
 
-    button {
+    .step1-btn {
       padding:8px 20px;
       cursor: pointer;
       background-color: red;
