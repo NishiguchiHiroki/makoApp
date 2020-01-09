@@ -21,7 +21,9 @@
         <li>▷配達ラストオーダー 〜20:30</li>
       </ul>
     </div>
-
+    
+    <% if user_signed_in? %>
+    <% else %>
     <div class="sign-section">
       <div class="sign-in">
         <div class="create-icon">
@@ -37,6 +39,7 @@
         <%= link_to "ログイン ▷", new_user_session_path %>
       </div>
     </div>
+    <% end %>
 
     <div class="order-container">
       <div class="order-coll">
@@ -66,6 +69,9 @@
       <li class="global-nav__item"><%= link_to information_index_path do %><span>INFORMATION</span><br><span>ニュース</span><% end %></li>
       <li class="global-nav__item"><%= link_to accesses_path do %><span>ACCESS</span><br><span>アクセス</span><% end %></li>
       <li class="global-nav__item"><%= link_to root_path(anchor: "contact-form") do %><span>CONTACT</span><br><span>お問い合わせ</span><% end %></li>
+       <% if user_signed_in? %>
+      <li class="global-nav__item"><%= link_to  do %><span>MYPAGE</span><br><span>マイページ</span><% end %></li>
+       <% end %>
       </ul>
      </div>
 

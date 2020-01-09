@@ -1,0 +1,45 @@
+
+.single-main {
+  @include signup-heading;
+  h3 {
+    @include signup-heading_text;
+    
+    &:before {
+      @include signup-heading_before;
+    }
+  }
+}
+
+  .register-form {
+    @include signup-container-style;
+
+    .done-form {
+      p:first-child{
+       margin-top:50px;
+      }
+    .next-btn {
+      margin:50px 0 20px 0;
+  
+      .done-btn {
+        @include signup-btn(150px,40px);
+        padding:0;
+  
+        &:hover {
+          @include signup-btn_hover;
+        }
+
+        a {
+          color:#fff;
+          display: block;
+          width:100%;
+          height:100%;
+          padding:7px 15px;
+          
+          &:hover {
+            color:red;
+          }
+      }
+     }
+    }
+  }
+}

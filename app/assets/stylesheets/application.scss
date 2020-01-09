@@ -16,6 +16,8 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+
 @import "template/reset";
 @import "template/header";
 @import "template/navi";
@@ -35,6 +37,7 @@
 @import "signup/signup_step1";
 @import "signup/signup_step2";
 @import "signup/signup_step3";
+@import "signup/signup_done";
 
 // signupの終わり---------------------
 
@@ -54,3 +57,6 @@
 @import "views/settlement";
 @import "views/single-menu";
 @import "views/style";
+
+@import "config/colors";
+@import "modules/flash";

@@ -1,22 +1,19 @@
 .signup-header
   .signup-step1
     = render "signup-header"
-    .call__content
-      .content
-        .content__head
-          %p 電話番号の確認
-        .content__box
-          .content__boxes
-            .content__form  
-              %label{class: "label__title"} 携帯電話の番号
-              %input{placeholder: "携帯電話の番号入力", class: "input__form"}
-            %p
-              本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-            = link_to step3_signup_index_path, method: :post, class: 'content__btn' do
-              SMSを送信する
-            %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
-            .content__bottom
-              =link_to '#' do
-                電話番号が必要な理由
-                .i-class
-                  >
+    .call-contact
+      .call-contact__head
+        %h3 電話番号認証
+      .call-contact__box
+        = form_for @user, url:  step3_signup_index_path, method: :post do |f|
+          .call-contact__box__form  
+            %label{class: "call-label"} 携帯電話の番号
+            =f.telephone_field :phone_number, placeholder: "例）携帯電話の番号入力", value: session[:phone_number]
+          %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+          =f.submit "SMSを送信する",class:"step2-btn"
+          %p ※電話番号は本人確認や不正利用防止のために利用します。<br>他のユーザーに公開されることはありません。
+          .call-contact__box__footer
+            =link_to '#' do
+              電話番号が必要な理由
+              .i-class
+                >

@@ -1,10 +1,52 @@
 
-.register-address{
-  width:70%;
-  max-width:1960px;
-  height:100%;
-  margin: 0 auto;
-  text-align: center;
-  background-color: #f5f5f5;
-  z-index: 10;
+
+.register-address {
+  @include signup-heading;
+
+  h3 {
+    @include signup-heading_text;
+
+    &:before {
+      @include signup-heading_before;
+    }
+  }
 }
+
+.step3-form {
+  @include signup-form;
+
+  &__title-input {
+    @include signup-title-input;
+  
+    span{
+      @include signup-title-input_span;
+    }
+
+    label:before {
+      @include signup-title-input_label;
+    }
+  }
+
+  &__input-layout {
+    @include signup-input-layout;
+
+    input {
+      margin-top: 20px;
+      @include signup-input(400px,16px)
+    }
+  }
+
+  .next-btn {
+    margin:10px 0 20px 0;
+
+    .step3-btn {
+      @include signup-btn(100px,40px);
+
+      &:hover {
+        @include signup-btn_hover;
+      }
+    }
+  }
+}
+
+
