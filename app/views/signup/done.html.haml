@@ -2,14 +2,13 @@
   .signup-step1
     = render "signup-header"
   .single-main
-    %p.register-head 会員登録完了
+    %h3 会員登録完了
     .register-form
-      .form
-        .end
+      = form_with url: signup_index_path, method: :post do |f|
+        .done-form
           %p ありがとうございます。
           %p 会員登録が完了しました。
-      .form
-        .next-btn
-        = link_to root_path do
-          %button{type:"submit",class:"btn-red"}
-            メニューを見る
+        .done-form
+          .next-btn
+            =f.submit "メニューを見る",class:"done-btn"
+              

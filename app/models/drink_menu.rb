@@ -1,4 +1,5 @@
 class DrinkMenu < ApplicationRecord
-    has_many :users_menus
-    has_many :users, through: :users_menus
+    
+  belongs_to :order
+  belongs_to :user
 end
