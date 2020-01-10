@@ -1,0 +1,90 @@
+%header
+  .header-container
+    .title-container
+      .heading
+        %p 新鮮な国産地鶏を使用。
+        %p だから美味しい！
+      .shop-name
+        .shop-container
+          %h1 唐揚げのマコ
+          = image_tag 'logo.png', alt:'logo', width:'50px'
+    .sales-container
+      .business-hour
+        %ul
+          %li ▷営業時間：11:00〜21:00
+          %li ▷配達ラストオーダー 〜20:30
+      - if user_signed_in?
+        .order-container
+          .order-coll
+            %a{:href => "tel:+81-80-6179-2524"} 電話注文 ▷
+          .sp-phone
+            = link_to tel:"+81-80-6179-2524" do
+              = image_tag 'sp-phone.png', alt:'order-coll', width:'50px'
+          .order-menu
+            = link_to "注文受付 ▷"
+          .sp-menu
+            = link_to do
+              = image_tag 'sp-money.png', alt:'order-menu', width:'50px'
+      - else
+    .sign-section
+      .sign-in
+        .create-icon
+          = link_to step1_signup_index_path do
+            %i.fa.fa-user-plus
+            = link_to "新規登録 ▷", step1_signup_index_path
+      .login
+        .login-icon
+          = link_to new_user_session_path do
+            %i.fa.fa-sign-in
+            = link_to "ログイン ▷", new_user_session_path
+  .order-container
+    .order-coll
+      %a{:href => "tel:+81-80-6179-2524"} 電話注文 ▷
+    .sp-phone
+      = link_to tel:"+81-80-6179-2524" do
+        = image_tag 'sp-phone.png', alt:'order-coll', width:'50px'
+    .order-menu
+      = link_to "注文受付 ▷"
+    .sp-menu
+      = link_to do
+        = image_tag 'sp-money.png', alt:'order-menu', width:'50px'
+%nav
+  .navigaition
+    .navi-container
+      %ul.global-nav__list
+        %li.global-nav__item
+          = link_to root_path do
+            %span TOP
+            %br/
+            %span トップページ
+        %li.global-nav__item
+          = link_to menu_boxlunches_path(1) do
+            %span MENU
+            %br/
+            %span メニュー
+        %li.global-nav__item
+          = link_to information_index_path do
+            %span INFORMATION
+            %br/
+            %span ニュース
+        %li.global-nav__item
+          = link_to accesses_path do
+            %span ACCESS
+            %br/
+            %span アクセス
+        %li.global-nav__item
+          = link_to root_path(anchor: "contact-form") do
+            %span CONTACT
+            %br/
+            %span お問い合わせ
+        - if user_signed_in?
+          %li.global-nav__item
+            = link_to  mypage_path(current_user) do
+              %span MYPAGE
+              %br/
+              %span マイページ
+    #js-hamburger.hamburger-menu
+      %span.hamburger__line.hamburger-menu1
+      %span.hamburger__line.hamburger-menu2
+      %span.hamburger__line.hamburger-menu3
+    #js-black-bg.black-bg

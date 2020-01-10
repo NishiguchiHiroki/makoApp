@@ -1,0 +1,27 @@
+= render 'layouts/header'
+= render "template/menu_selections"
+.menu-container
+  %h2 Reservation
+  .menu-contents
+    - @reservations.each do |reservation|
+      %form{:action => "", :method => "post"}
+        .menu-package
+          .menu-image
+            = link_to "reservation/#{reservation.id}" do
+              = image_tag reservation.image, width:"200px", height:"150px"
+            %h4
+              = link_to do
+                = reservation.name
+            .count-price-container
+              .count-price
+                .price
+                  %p
+                    ¥#{reservation.price}
+                    %span (税込)
+                .count
+                  %label
+                    %select{:name => ""}
+                      - for count in 0..10 do
+                        %option{:value => "\#{count}"}= count
+              %input{:type => "submit", :value => "カートの中に入れる"}/
+= render 'layouts/footer'

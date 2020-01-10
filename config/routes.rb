@@ -14,6 +14,14 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :mypages do
+    member do
+      get "logout"
+      get "profile"
+      get "userinfo"
+    end
+  end
+
   root "menus#index"
   resources :menus, only: [:index, :show] do
     resources :boxlunches, only: [:index, :show]

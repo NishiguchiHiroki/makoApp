@@ -1,0 +1,27 @@
+= render 'layouts/header'
+= render "template/menu_selections"
+.menu-container
+  %h2 Single Menu
+  .menu-contents
+    - @single_menus.each do |single|
+      %form{:action => "", :method => "post"}
+        .menu-package
+          .menu-image
+            = link_to "single_menu/#{single.id}" do
+              = image_tag single.image, width:"200px", height:"150px"
+            %h4
+              = link_to do
+                = single.name
+            .count-price-container
+              .count-price
+                .price
+                  %p
+                    ¥#{single.price}
+                    %span (税込)
+                .count
+                  %label
+                    %select{:name => ""}
+                      - for count in 0..10 do
+                        %option{:value => "\#{count}"}= count
+              %input{:type => "submit", :value => "カートの中に入れる"}/
+= render 'layouts/footer'

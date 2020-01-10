@@ -20,6 +20,13 @@
    opacity: 0.8;
   }
 }
+
+.signin-description{
+  font-size:18px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
 .form-signin .checkbox {
   font-weight: 400;
 }
@@ -43,10 +50,18 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.btn-primary{
+.btn-primary {
   background-color: #FA742B;
   color:#fff;
   border-color: gray;
+  display: block;
+  width:100%;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  margin:15px auto;
+
   &:hover {
   background-color: #FA742B;
   color:#fff;

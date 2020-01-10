@@ -1,0 +1,13 @@
+.signin-page
+  .form-signin
+    = link_to root_path do
+      = image_tag 'logo.png', alt:'logo', width:'100px',height:'100px'
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      %h1.signin-description メールアドレスとパスワードを<br>入力してください。
+      =f.email_field :email, autofocus: true, autocomplete: "email", id:"inputEmail",class:"form-control",placeholder:"Email Address"
+      =f.password_field :password, autocomplete: "new-password",class: "form-control",placeholder: "Password"
+      .checkbox.mb-3
+        %label
+          %input{:type => "checkbox", :value => "remember-me"}/
+          Remember me
+        =f.submit "Sign in",class:"btn-primary"

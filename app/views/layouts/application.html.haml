@@ -1,0 +1,25 @@
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "唐揚げのマコは、新鮮な国産地鶏を使用した弁当屋さんです。メイン料理は、唐揚げで他にも様々な揚げ物も振舞っていますのでぜひ一度お召し上がりください。堺市での配達をしていますので、詳細は、当社のWEBサイトをご覧ください。", :name => "description"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %meta{:content => "JuILCHP0jmIZwxGSR_LDEeV02aLIQ0U57gl8GKadVu0", :name => "google-site-verification"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "唐揚げのマコ", :property => "og:title"}/
+    %meta{:content => "唐揚げのマコ", :property => "og:site_name"}/
+    %meta{:content => "唐揚げのマコは、新鮮な国産地鶏を使用した弁当屋さんです。メイン料理は、唐揚げで他にも様々な揚げ物も振舞っていますのでぜひ一度お召し上がりください。堺市での配達をしていますので、詳細は、当社のWEBサイトをご覧ください。", :property => "og:description"}/
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "ja_JP", :property => "og:locale"}/
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", :integrity => "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", :rel => "stylesheet"}/
+    %title 唐揚げのマコ
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = yield
+    %script{:crossorigin => "anonymous", :integrity => "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n", :src => "https://code.jquery.com/jquery-3.4.1.slim.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"}

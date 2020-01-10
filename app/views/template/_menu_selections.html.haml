@@ -1,0 +1,44 @@
+.menu-selection
+  .menu-page
+    .main-menu
+      = link_to  menu_boxlunches_path(1) do
+        = image_tag "main-menu.png", alt:"singlemenu-menu", width:"50px"
+    .single-menu
+      = link_to single_menus_path do
+        = image_tag "single-menu.png", alt:"singlemenu-menu", width:"50px"
+    .drink-menu
+      = link_to drink_menus_path do
+        = image_tag "drink-menu.png", alt:"drink-menu", width:"50px"
+    .reservation-menu
+      = link_to reservations_path do
+        = image_tag "reservation-menu.png", alt:"reservation-menu", width:"70px"
+  .text-box
+    %p
+      Box Lunch
+      %br>/
+      \&gt;弁当
+    %p
+      Single Menu
+      = succeed "\u5358\u54C1" do
+        %br/
+    %p
+      Drink
+      = succeed "\u30C9\u30EA\u30F3\u30AF" do
+        %br/
+    %p
+      Reservation
+      %br>/
+      予約限定メニュー
+  .image-box
+    .main-image
+      = link_to  menu_boxlunches_path(1) do
+        = image_tag "main-menu.png", alt:"singlemenu-menu", width:"30px"
+    .single-box
+      = link_to single_menus_path do
+        = image_tag "single-menu.png", alt:"singlemenu-menu", width:"30px"
+    .drink-box
+      = link_to drink_menus_path do
+        = image_tag "drink-menu.png", alt:"drink-menu", width:"30px"
+    .reservation-box
+      = link_to reservations_path do
+        = image_tag "reservation-menu.png", alt:"reservation-menu", width:"40px", height:"20px"

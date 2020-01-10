@@ -7,7 +7,7 @@
     border-bottom: none;
     margin-top: 20px;
 
-    &::before{
+    &:before{
     @include h2-before-package("../../image/single-menu.png");
   }
 }
