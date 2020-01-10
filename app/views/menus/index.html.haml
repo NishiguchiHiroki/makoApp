@@ -1,0 +1,64 @@
+= render 'layouts/notifications'
+= render 'layouts/header'
+.main-container
+  .keyvisual
+%main
+  .menu-container
+    %h2 Menus
+    = render partial:'menu_contents',locals: {menu: @menus}
+  .show-all
+    %p
+      %a{:href => "./menu.php"} 一覧で見る
+= render 'aside'
+%section
+  .news-page
+    　　
+    %h2 News
+    　
+    .news-container
+      %p.date
+        %span 2019.00.00
+        %span.cat News
+      %h3.tit 新しいメニューを追加しました。
+      %p.date
+        %span 2019.00.00
+        %span.cat News
+      %h3.tit 値段の改正を行いました。
+      %p.date
+        %span 2019.00.00
+        %span.cat News
+      %h3.tit メディアに記載されました。
+      %p.date
+        %span 2019.00.00
+        %span.cat News
+      %h3.tit 値段の改正を行いました。
+      %p.date
+        %span 2019.00.00
+        %span.cat News
+      %h3.tit メディアに記載されました。
+      　
+    .show-all
+      %p
+        %a{:href => "./information.php"} 一覧で見る
+      　
+#contact-form.contact-form
+  .input-container
+    %h2 Contact form
+    %p お問い合わせ内容をご記入ください
+  %form.form{:action => "index.html", :method => "post"}
+    .contact-container
+      %dl
+        %dt
+          %span.required お名前 :
+        %dd
+          %input.name.required{:name => "name", :type => "text"}/
+        %dt
+          %span.required メールアドレス :
+        %dd
+          %input.email.required{:name => "email", :type => "email"}/
+        %dt お問い合わせ内容 :
+        %dd
+          %textarea#message{:name => "message"}
+    .attention
+      %button.contact-btn{:name => "送信", :type => "submit", :value => "値"} 確認する
+= render 'layouts/footer'

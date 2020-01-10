@@ -1,0 +1,18 @@
+= render 'layouts/header'
+.access-container
+  .access-content
+    %h2 ACCESS
+  .access-map-container
+    .map-image
+      = image_tag "map.jpg", alt: "map", width: "500px", height: "300px"
+    .access-text
+      %p 〒593-8302
+      %p 大阪府堺市西区北条町1丁28-6
+      %p TEL : 080-4399-0510
+      = link_to  do
+        %p.google-map
+          Google Map#{image_tag "map.icon.png", alt: "map-icon", width: "40px", height: "45px"}
+.home-btn
+  = link_to menu_boxlunches_path(1) do
+    %button{:name => "home-btn", :type => "button", :value => "値"} メニューに戻る
+= render 'layouts/footer'

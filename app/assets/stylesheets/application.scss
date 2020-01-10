@@ -42,6 +42,15 @@
 // signupの終わり---------------------
 
 
+//  mypageのはじまり-------------------
+
+@import "mypage/mypage-sidebar";
+@import "mypage/mypage";
+@import "mypage/logout";
+
+
+//  mypageの終わり-------------------
+
 @import "template/home-btn";
 @import "template/main-color";
 @import "template/menu-contents";

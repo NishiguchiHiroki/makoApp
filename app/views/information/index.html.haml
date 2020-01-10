@@ -1,0 +1,18 @@
+= render 'layouts/header'
+.information-container
+  .information-content
+    .information-name
+      %h2 INFORMATION
+    - @information.each do |event|
+      .news_container
+        .news-contents
+          .news-text-box
+            .section-container
+              %h3.news-section= event.title
+              %p.detail= event.content
+            .news-image-box
+              = image_tag event.image, alt:"catch", name:"catch-image", width:"200px", height:"150px"
+.home-btn
+  %a{:href => "menu.php"}
+    %button{:name => "home-btn", :type => "button", :value => "値"} メニューに戻る
+= render 'layouts/footer'

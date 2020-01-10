@@ -70,7 +70,7 @@
       <li class="global-nav__item"><%= link_to accesses_path do %><span>ACCESS</span><br><span>アクセス</span><% end %></li>
       <li class="global-nav__item"><%= link_to root_path(anchor: "contact-form") do %><span>CONTACT</span><br><span>お問い合わせ</span><% end %></li>
        <% if user_signed_in? %>
-      <li class="global-nav__item"><%= link_to  do %><span>MYPAGE</span><br><span>マイページ</span><% end %></li>
+      <li class="global-nav__item"><%= link_to mypage_path(current_user) do %><span>MYPAGE</span><br><span>マイページ</span><% end %></li>
        <% end %>
       </ul>
      </div>
