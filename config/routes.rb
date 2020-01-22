@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     end
   end
 
+  root "menus#new"
+
   resources :mypages do
     member do
       get "logout"
@@ -21,14 +23,20 @@ Rails.application.routes.draw do
       get "userinfo"
     end
   end
+  
+  resources :boxlunches, only: [:new]
+  resources :single_menus, only: [:new]
+  resources :drink_menus, only: [:new]
+  resources :reservations, only: [:new]
 
-  root "menus#index"
-  resources :menus, only: [:index, :show] do
-    resources :boxlunches, only: [:index, :show]
+  resources :menus, only: [:new, :show]  do
+    scope module: :menus do
+      resources :carts, only: [:create, :destroy]
+    end
   end
-  resources :single_menus, only: [:index, :show]
-  resources :drink_menus, only: [:index, :show]
-  resources :reservations, only: [:index, :show]
-  resources :information, only: :index
+
+  resources :information, only: [:index, :show]
   resources :accesses, only: :index
+  resources :carts, only: [:show]
+  resources :orders, only: [:show]
 end

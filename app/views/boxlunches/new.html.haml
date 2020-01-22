@@ -4,7 +4,7 @@
   %h2 Boxlunch Menu
   .menu-contents
     - @boxlunches.each do |boxlunch|
-      %form{:action => "", :method => "post"}
+      = form_for @cart, url: menu_carts_path(boxlunch), method: :post do |f|
         .menu-package
           .menu-image
             = link_to "boxlunch/#{boxlunch.id}" do
@@ -15,13 +15,8 @@
             .count-price-container
               .count-price
                 .price
-                  %p
-                    ¥#{boxlunch.price}
-                    %span (税込)
+                  %p ¥#{boxlunch.price}(税込)
                 .count
-                  %label
-                    %select{:name => ""}
-                      - for count in 0..10 do
-                        %option{:value => "\#{count}"}= count
-              %input{:type => "submit", :value => "カートの中に入れる"}/
+                  =f.select :quantity, options_for_select(1..10), include_blank: '0'
+              =f.submit "カートの中に入れる"
 = render 'layouts/footer'

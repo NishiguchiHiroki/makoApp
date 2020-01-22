@@ -1,6 +1,5 @@
 class Address < ApplicationRecord
-  belongs_to :user, optional: true
-  has_many :orders
+  has_one :user
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture

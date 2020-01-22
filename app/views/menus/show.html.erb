@@ -1,0 +1,44 @@
+<%= render 'layouts/header' %> 
+<%= render "template/menu_selections" %>
+<div class="details-container">
+  <div class="details-content">
+    <h2><%= @menu.name %>(お茶付き)</h2>
+  </div>
+
+<div class="details-image-container">
+   <div class="details-image">
+      <%= image_tag @menu.image, alt:"menu-image",  width:"250px", height:"220px"%>
+   </div>
+
+<div class="details-text">
+    <p class="important">価格:¥<%= @menu.price %><span>(税込) 大盛り無料</span></p>
+    <p class="important">アレルギー物質表示:</p>
+    <p class="discription">商品説明</p>
+    <p class="discription">食材</p>
+  </div>
+ </div>
+</div>
+
+<div class="home-btn">
+  <%= link_to "メニューに戻る",root_path %>
+</div>
+
+<div class="image-box">
+  <div class="main-image">
+    <%= link_to do %><%= image_tag asset_path("main-menu.png"), alt:"main-menu", width:"30px" %><% end %>
+  </div>
+
+  <div class="single-box">
+    <%= link_to do %><%= image_tag asset_path("single-menu.png"), alt:"main-menu", width:"30px" %><% end %>
+  </div>
+
+  <div class="drink-box">
+    <%= link_to do %><%= image_tag asset_path("drink-menu.png"), alt:"main-menu", width:"30px" %><% end %>
+  </div>
+
+  <div class="reservation-box">
+    <%= link_to do %><%= image_tag asset_path("reservation-menu.png"), alt:"main-menu", width:"40px", height:"20px" %><% end %>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

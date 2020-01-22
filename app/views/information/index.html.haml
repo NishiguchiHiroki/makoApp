@@ -13,6 +13,5 @@
             .news-image-box
               = image_tag event.image, alt:"catch", name:"catch-image", width:"200px", height:"150px"
 .home-btn
-  %a{:href => "menu.php"}
-    %button{:name => "home-btn", :type => "button", :value => "値"} メニューに戻る
+  = link_to "メニューに戻る",root_path
 = render 'layouts/footer'

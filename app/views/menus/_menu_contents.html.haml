@@ -1,19 +1,16 @@
 .menu-contents
   - @menus.each do |menu|
-    %form{:action => "", :method => "post"}
+    = form_for @cart, url: menu_carts_path(menu), method: :post do |f|
       .menu-package
         .menu-image
-          = image_tag menu.image ,width:"200px", height:"150px"
-          %h4= link_to "#{menu.name}"
+          = link_to menu_path(menu) do
+            = image_tag menu.image ,width:"200px", height:"150px"
+          %h4= link_to "#{menu.name}", menu_path(menu)
           .count-price-container
-            .count-price
-              .price
-                %p
-                  ￥500
-                  %span (税込)
-              .count
-                %label
-                  %select.menu-count
-                    - for count in 0..10 do
-                      %option{:value => "\#{count}"}= count
-            %input{:type => "submit", :value => "カートの中に入れる"}/
+            .count-price-container
+              .count-price
+                .price
+                  %p ¥#{menu.price}(税込)
+                .count
+                  =f.select :quantity, options_for_select(1..10), include_blank: '0'
+              =f.submit "カートの中に入れる"

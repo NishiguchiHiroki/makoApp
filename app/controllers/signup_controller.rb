@@ -68,6 +68,7 @@ class SignupController < ApplicationController
     session[:password] = user_params[:password]
     session[:password_confirmation] = user_params[:password_confirmation]
     redirect_to step2_signup_index_path
+    
   end
 
   def save_to_session_step2

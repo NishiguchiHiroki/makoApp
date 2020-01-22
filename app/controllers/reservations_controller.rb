@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
-  def index
-    @reservations = Reservation.all
+  def new
+    @reservations = Menu.where(id: 22..25)
+    @cart = Cart.new
   end
 
   def show

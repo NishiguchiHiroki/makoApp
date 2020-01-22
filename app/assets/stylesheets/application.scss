@@ -53,8 +53,6 @@
 
 @import "template/home-btn";
 @import "template/main-color";
-@import "template/menu-contents";
-@import "template/menu-selection";
 @import "template/template";
 @import "views/access";
 @import "views/contact";
@@ -65,6 +63,8 @@
 @import "views/reservation";
 @import "views/settlement";
 @import "views/single-menu";
+@import "template/menu-contents";
+@import "template/menu-selection";
 @import "views/style";
 
 @import "config/colors";

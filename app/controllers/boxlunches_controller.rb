@@ -1,8 +1,6 @@
 class BoxlunchesController < ApplicationController
-  def index
-    @boxlunches = Boxlunch.all
-  end
-
-  def show
+  def new
+    @boxlunches = Menu.where(id: 1..9)
+    @cart = Cart.new
   end
 end

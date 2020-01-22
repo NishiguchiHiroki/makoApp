@@ -4,12 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :boxlunchs
-  has_many :single_menus
-  has_many :drink_menus
-  has_many :reservations
-
-  has_one :address
-  has_many :orders
+  has_one :order,         dependent: :destroy
+  belongs_to  :address
+  
+  def prepare_order
+    order || create_order
+  end
   
 end
