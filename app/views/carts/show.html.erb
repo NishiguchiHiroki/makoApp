@@ -1,0 +1,52 @@
+<%= render 'layouts/header' %> 
+<%= render "template/menu_selections" %>
+<div class="cart-container">
+  <div class="cart-history">
+    <h3>注文履歴</h3>
+  </div>
+
+  <div class="cart-selection">
+    <section>
+      <ul>
+        <li><a href="#">カート</a></li>
+        <li><a href="#">注文済み</a></li>
+        <li><a href="#">キャンセルされた注文</a></li>
+      </ul>
+    </section>
+  </div>
+
+ <form action="#" method="post">
+ <% @cart.each do |cart| %>
+  <div class="cart-content">
+    <div class="cart-details-top">
+      <ul>
+        <li>注文日:<br><span><%= cart.created_at.to_s(:published_on) %></span></li>
+        <li>配達予測時間:<br><span><%= cart.created_at.to_s(:datetime_jp) %></span></li>
+        <li>お届け先:<br><span>西口裕貴 様</span></li>
+        <li>金額<br><span>¥<%= cart.menu.price %></span></li>
+      </ul>
+    </div>
+
+    <div class="cart-details-under">
+      <div class="in-cart-name">
+        <p>商品名:<span><%= cart.menu.name %></span></p>
+        <p>個数:<span><%= cart.quantity %>個</span></p>
+        <%= image_tag asset_path(cart.menu.image), alt:"image", width:"180px", height:"150px" %>
+      </div>
+      <div class="cart-important">
+        <p>アレルギー物質表示: &nbsp;&nbsp;&nbsp;<%= cart.menu.allergy %></p>
+        <p>商品説明: &nbsp;&nbsp;&nbsp;<%= cart.menu.description %></p>
+        <p>食材: &nbsp;&nbsp;&nbsp;<%= cart.menu.ingredient %></p>
+      </div>
+    </div>
+</div>
+</div>
+ <% end %>
+
+<div class="price-container">
+     <h3>合計金額: ¥</h3>
+     <button type="submit" name="buy">注文する</button>
+  </form>
+</div>
+
+<%= render 'layouts/footer' %>

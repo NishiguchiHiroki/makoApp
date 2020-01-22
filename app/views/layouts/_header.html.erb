@@ -23,39 +23,54 @@
     </div>
     
     <% if user_signed_in? %>
+      <div class="order-container">
+        <div class="order-coll">
+          <a href="tel:+81-80-6179-2524">電話注文 ▷</a>
+        </div>
+        <div class="sp-phone">
+          <%= link_to tel:"+81-80-6179-2524" do %><%= image_tag 'sp-phone.png', alt:'order-coll', width:'50px'%><% end %>
+        </div>
+
+        <div class="order-menu">
+          <%= link_to "注文受付 ▷", cart_path(current_user.id) %>
+        </div>
+        <div class="sp-menu">
+          <%= link_to do %><%= image_tag 'sp-money.png', alt:'order-menu', width:'50px'%><% end %>
+        </div>
+      </div>
     <% else %>
-    <div class="sign-section">
-      <div class="sign-in">
-        <div class="create-icon">
-           <%= link_to step1_signup_index_path do %><i class="fa fa-user-plus"></i><% end %>
+      <div class="sign-section">
+        <div class="sign-in">
+          <div class="create-icon">
+            <%= link_to step1_signup_index_path do %><i class="fa fa-user-plus"></i><% end %>
+          </div>
+           <%= link_to "新規登録 ▷", step1_signup_index_path %>
         </div>
-        <%= link_to "新規登録 ▷", step1_signup_index_path %>
+
+        <div class="login">
+          <div class="login-icon">
+            <%= link_to new_user_session_path do %><i class="fa fa-sign-in"></i><% end %>
+          </div>
+          <%= link_to "ログイン ▷", new_user_session_path %>
+        </div>
       </div>
 
-      <div class="login">
-        <div class="login-icon">
-          <%= link_to new_user_session_path do %><i class="fa fa-sign-in"></i><% end %>
+      <div class="order-container">
+        <div class="order-coll">
+          <a href="tel:+81-80-6179-2524">電話注文 ▷</a>
         </div>
-        <%= link_to "ログイン ▷", new_user_session_path %>
+        <div class="sp-phone">
+          <%= link_to tel:"+81-80-6179-2524" do %><%= image_tag 'sp-phone.png', alt:'order-coll', width:'50px'%><% end %>
+        </div>
+
+        <div class="order-menu">
+          <%= link_to "注文受付 ▷" %>
+        </div>
+        <div class="sp-menu">
+          <%= link_to  do %><%= image_tag 'sp-money.png', alt:'order-menu', width:'50px'%><% end %>
+        </div>
       </div>
-    </div>
     <% end %>
-
-    <div class="order-container">
-      <div class="order-coll">
-        <a href="tel:+81-80-6179-2524">電話注文 ▷</a>
-      </div>
-      <div class="sp-phone">
-        <%= link_to tel:"+81-80-6179-2524" do %><%= image_tag 'sp-phone.png', alt:'order-coll', width:'50px'%><% end %>
-      </div>
-
-      <div class="order-menu">
-        <%= link_to "注文受付 ▷" %>
-      </div>
-      <div class="sp-menu">
-        <%= link_to do %><%= image_tag 'sp-money.png', alt:'order-menu', width:'50px'%><% end %>
-      </div>
-    </div>
     </div>
   </div>
 </header>
@@ -65,7 +80,7 @@
      <div class="navi-container">
       <ul class="global-nav__list">
       <li class="global-nav__item"><%= link_to root_path do %><span>TOP</span><br><span>トップページ</span><% end %></li>
-      <li class="global-nav__item"><%= link_to menu_boxlunches_path(1) do %><span>MENU</span><br><span>メニュー</span><% end %></li>
+      <li class="global-nav__item"><%= link_to new_boxlunch_path do %><span>MENU</span><br><span>メニュー</span><% end %></li>
       <li class="global-nav__item"><%= link_to information_index_path do %><span>INFORMATION</span><br><span>ニュース</span><% end %></li>
       <li class="global-nav__item"><%= link_to accesses_path do %><span>ACCESS</span><br><span>アクセス</span><% end %></li>
       <li class="global-nav__item"><%= link_to root_path(anchor: "contact-form") do %><span>CONTACT</span><br><span>お問い合わせ</span><% end %></li>

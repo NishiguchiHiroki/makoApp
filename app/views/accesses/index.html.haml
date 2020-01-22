@@ -13,6 +13,5 @@
         %p.google-map
           Google Map#{image_tag "map.icon.png", alt: "map-icon", width: "40px", height: "45px"}
 .home-btn
-  = link_to menu_boxlunches_path(1) do
-    %button{:name => "home-btn", :type => "button", :value => "値"} メニューに戻る
+  = link_to "メニューに戻る",root_path
 = render 'layouts/footer'

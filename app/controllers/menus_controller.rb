@@ -1,8 +1,11 @@
 class MenusController < ApplicationController
-  def index
-    @menus = Boxlunch.all
-  end
 
+  def new
+    @menus = Menu.first(8)
+    @cart = Cart.new
+  end
+  
   def show
+    @menu = Menu.find(params[:id])
   end
 end

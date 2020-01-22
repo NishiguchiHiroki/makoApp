@@ -1,5 +1,6 @@
 class SingleMenusController < ApplicationController
-  def index
-    @single_menus = SingleMenu.all
+  def new
+    @single_menus = Menu.where(id: 10..13)
+    @cart = Cart.new
   end
 end
