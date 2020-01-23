@@ -1,44 +1,35 @@
 .menu-selection
   .menu-page
-    .main-menu
-      = link_to new_boxlunch_path do
-        = image_tag "main-menu.png", alt:"singlemenu-menu", width:"50px"
+    = link_to new_boxlunch_path do
+      .main-menu
+        = image_tag asset_path("main-menu.png"), alt:"main-menu", width:"50px"
+        .text-box
+          %p Box Lunch<br>>お弁当
     .single-menu
       = link_to new_single_menu_path do
-        = image_tag "single-menu.png", alt:"singlemenu-menu", width:"50px"
+        = image_tag asset_path("single-menu.png"), alt:"single-menu", width:"50px"
+        .text-box
+          %p Single Menu<br>>お弁当単品
     .drink-menu
       = link_to new_drink_menu_path do
-        = image_tag "drink-menu.png", alt:"drink-menu", width:"50px"
+        = image_tag asset_path("drink-menu.png"), alt:"drink-menu", width:"50px"
+        .text-box
+          %p Drink<br>>飲み物
     .reservation-menu
       = link_to new_reservation_path do
-        = image_tag "reservation-menu.png", alt:"reservation-menu", width:"70px"
-  .text-box
-    %p
-      Box Lunch
-      %br>/
-      \&gt;弁当
-    %p
-      Single Menu
-      = succeed "\u5358\u54C1" do
-        %br/
-    %p
-      Drink
-      = succeed "\u30C9\u30EA\u30F3\u30AF" do
-        %br/
-    %p
-      Reservation
-      %br>/
-      予約限定メニュー
+        = image_tag asset_path("reservation-menu.png"), alt:"reservation-menu", width:"70px"
+        .text-box
+          %p Reservation<br>>予約限定
   .image-box
     .main-image
       = link_to  new_boxlunch_path do
-        = image_tag "main-menu.png", alt:"singlemenu-menu", width:"30px"
+        = image_tag asset_path("main-menu.png"), alt:"singlemenu-menu", width:"30px"
     .single-box
       = link_to new_single_menu_path do
-        = image_tag "single-menu.png", alt:"singlemenu-menu", width:"30px"
+        = image_tag asset_path("single-menu.png"), alt:"singlemenu-menu", width:"30px"
     .drink-box
       = link_to new_drink_menu_path do
-        = image_tag "drink-menu.png", alt:"drink-menu", width:"30px"
+        = image_tag asset_path("drink-menu.png"), alt:"drink-menu", width:"30px"
     .reservation-box
       = link_to new_reservation_path do
-        = image_tag "reservation-menu.png", alt:"reservation-menu", width:"40px", height:"20px"
+        = image_tag asset_path("reservation-menu.png"), alt:"reservation-menu", width:"40px", height:"20px"
