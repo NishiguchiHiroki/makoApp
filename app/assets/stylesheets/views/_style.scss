@@ -115,6 +115,7 @@
   }
 .news-container{
   @include aside-container-style;
+  margin-bottom: 100px;
 
   p{
     @include aside-p-style;
