@@ -1,2 +1,0 @@
-class Boxlunch < ApplicationRecord
-end
