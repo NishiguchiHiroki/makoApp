@@ -44,13 +44,14 @@
 
 //  mypageのはじまり-------------------
 
-@import "mypage/mypage-sidebar";
 @import "mypage/mypage";
+@import "mypage/mypage-sidebar";
 @import "mypage/logout";
 
 
 //  mypageの終わり-------------------
 
+@import "views/style";
 @import "template/home-btn";
 @import "template/main-color";
 @import "template/template";
@@ -65,7 +66,6 @@
 @import "views/single-menu";
 @import "template/menu-contents";
 @import "template/menu-selection";
-@import "views/style";
 
 @import "config/colors";
 @import "modules/flash";

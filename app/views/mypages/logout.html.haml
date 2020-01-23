@@ -1,8 +1,6 @@
 = render 'layouts/header'
-= render 'mypages/mypage-sidebar'
-
-.single-main 
-  .single-inner
-    = link_to destroy_user_session_path, method: :delete do
-      %button{type:"submit",class:"btn-red"}
-        ログアウト
+.mypage_container
+  = render 'mypages/mypage-sidebar'
+  .mypage-logout 
+    .mypage-logout__button
+      = link_to "ログアウト", destroy_user_session_path, method: :delete 
