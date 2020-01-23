@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :order,         dependent: :destroy
-  has_one  :address
+  belongs_to  :address
   
   def prepare_order
     order || create_order

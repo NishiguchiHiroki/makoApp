@@ -1,2 +1,0 @@
-class DrinkMenu < ApplicationRecord
-end

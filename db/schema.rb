@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_18_070328) do
+ActiveRecord::Schema.define(version: 2019_12_02_121752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,17 +21,6 @@ ActiveRecord::Schema.define(version: 2020_01_18_070328) do
     t.string "city", null: false
     t.string "house_number", null: false
     t.string "building_name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "boxlunches", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "price", null: false
-    t.text "image", null: false
-    t.string "allergy"
-    t.string "description", null: false
-    t.text "ingredient", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,15 +40,6 @@ ActiveRecord::Schema.define(version: 2020_01_18_070328) do
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
     t.string "ancestry", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "drink_menus", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "price", null: false
-    t.text "image", null: false
-    t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -92,28 +72,6 @@ ActiveRecord::Schema.define(version: 2020_01_18_070328) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
-  end
-
-  create_table "reservations", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "price", null: false
-    t.text "image", null: false
-    t.string "allergy"
-    t.string "description", null: false
-    t.text "ingredient", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "single_menus", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "price", null: false
-    t.text "image", null: false
-    t.string "allergy"
-    t.string "description", null: false
-    t.text "ingredient", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
