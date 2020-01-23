@@ -37,6 +37,6 @@ Rails.application.routes.draw do
 
   resources :information, only: [:index, :show]
   resources :accesses, only: :index
-  resources :carts, only: [:show]
+  resources :carts, only: [:show, :update]
   resources :orders, only: [:show]
 end
