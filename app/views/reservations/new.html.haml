@@ -7,11 +7,10 @@
       = form_for @cart, url: menu_carts_path(reservation), method: :post do |f|
         .menu-package
           .menu-image
-            = link_to "reservation/#{reservation.id}" do
+            = link_to menu_path(reservation) do
               = image_tag reservation.image, width:"200px", height:"150px"
             %h4
-              = link_to do
-                = reservation.name
+              = link_to "#{reservation.name}", menu_path(reservation);
             .count-price-container
               .count-price
                 .price

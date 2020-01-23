@@ -11,10 +11,10 @@
    </div>
 
 <div class="details-text">
-    <p class="important">価格:¥<%= @menu.price %><span>(税込) 大盛り無料</span></p>
-    <p class="important">アレルギー物質表示:</p>
-    <p class="discription">商品説明</p>
-    <p class="discription">食材</p>
+    <p class="important">価格:¥<%= @menu.price %><span>(税込) &nbsp;&nbsp;&nbsp;大盛り無料</span></p>
+    <p class="important">アレルギー物質表示: &nbsp;&nbsp;&nbsp;<%= @menu.allergy %></p>
+    <p class="discription">商品説明: &nbsp;&nbsp;&nbsp;<%= @menu.description %></p>
+    <p class="discription">食材: &nbsp;&nbsp;&nbsp;<%= @menu.ingredient %></p>
   </div>
  </div>
 </div>

@@ -10,5 +10,4 @@ class User < ApplicationRecord
   def prepare_order
     order || create_order
   end
-  
 end
