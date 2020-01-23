@@ -9,11 +9,7 @@
       <div class="shop-name">
         <div class="shop-container">
           <h1>唐揚げのマコ</h1>
-<<<<<<< Updated upstream
-          <%= image_tag asset_path('/logo.png'), alt:'logo', width:'50px'%>
-=======
-          <%= image_tag 'logo.png', alt:'logo', width:'50px'%>
->>>>>>> Stashed changes
+          <%= image_tag asset_path('logo.png'), alt:'logo', width:'50px'%>
         </div>
       </div>
     </div>
@@ -25,7 +21,7 @@
         <li>▷配達ラストオーダー 〜20:30</li>
       </ul>
     </div>
-    
+
     <% if user_signed_in? %>
       <div class="order-container">
         <div class="order-coll">
