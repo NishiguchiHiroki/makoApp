@@ -59,6 +59,7 @@ group :test do
 end
 
 group :production do
+  gem "rails_12factor"
   gem 'pg','>= 0.18', '< 2.0'
 end
 
@@ -78,4 +79,3 @@ gem 'bcrypt'
 gem 'pry-rails'
 gem "aws-sdk-s3", require: false
 gem 'bootstrap', '~> 4.4.1'
-gem "rails_12factor", group: :production
