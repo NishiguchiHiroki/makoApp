@@ -4,7 +4,7 @@
       .menu-package
         .menu-image
           = link_to menu_path(menu) do
-            = image_tag menu.image ,width:"200px", height:"150px"
+            = image_tag asset_path(menu.image) ,width:"200px", height:"150px"
           %h4= link_to "#{menu.name}", menu_path(menu)
           .count-price-container
             .count-price-container
