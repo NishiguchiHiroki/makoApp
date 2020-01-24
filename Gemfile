@@ -72,5 +72,6 @@ gem 'kaminari'
 gem 'devise'
 gem 'bcrypt'
 gem 'pry-rails'
+gem "aws-sdk-s3", require: false
 gem 'bootstrap', '~> 4.4.1'
 gem "rails_12factor", group: :production
