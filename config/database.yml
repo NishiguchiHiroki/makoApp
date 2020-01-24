@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: makoApp_production
   username: makoApp
   password: <%= ENV['MAKOAPP_DATABASE_PASSWORD'] %>
