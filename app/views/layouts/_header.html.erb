@@ -9,7 +9,7 @@
       <div class="shop-name">
         <div class="shop-container">
           <h1>唐揚げのマコ</h1>
-          <%= image_tag('/assets/logo.png') %>
+          <%= image_tag('/assets/logo.jpeg') %>
         </div>
       </div>
     </div>
@@ -28,14 +28,14 @@
           <a href="tel:+81-80-6179-2524">電話注文 ▷</a>
         </div>
         <div class="sp-phone">
-          <%= link_to tel:"+81-80-6179-2524" do %><%= image_tag asset_path('sp-phone.png'), alt:'order-coll', width:'50px'%><% end %>
+          <%= link_to tel:"+81-80-6179-2524" do %><%= image_tag asset_path('sp-phone.jpeg'), alt:'order-coll', width:'50px'%><% end %>
         </div>
 
         <div class="order-menu">
           <%= link_to "注文受付 ▷", cart_path(current_user.id) %>
         </div>
         <div class="sp-menu">
-          <%= link_to do %><%= image_tag asset_path('sp-money.png'), alt:'order-menu', width:'50px'%><% end %>
+          <%= link_to do %><%= image_tag asset_path('sp-money.jpeg'), alt:'order-menu', width:'50px'%><% end %>
         </div>
       </div>
     <% else %>
@@ -60,14 +60,14 @@
           <a href="tel:+81-80-6179-2524">電話注文 ▷</a>
         </div>
         <div class="sp-phone">
-          <%= link_to tel:"+81-80-6179-2524" do %><%= image_tag asset_path('sp-phone.png'), alt:'order-coll', width:'50px'%><% end %>
+          <%= link_to tel:"+81-80-6179-2524" do %><%= image_tag asset_path('sp-phone.jpeg'), alt:'order-coll', width:'50px'%><% end %>
         </div>
 
         <div class="order-menu">
           <%= link_to "注文受付 ▷" %>
         </div>
         <div class="sp-menu">
-          <%= link_to  do %><%= image_tag asset_path('sp-money.png'), alt:'order-menu', width:'50px'%><% end %>
+          <%= link_to  do %><%= image_tag asset_path('sp-money.jpeg'), alt:'order-menu', width:'50px'%><% end %>
         </div>
       </div>
     <% end %>
