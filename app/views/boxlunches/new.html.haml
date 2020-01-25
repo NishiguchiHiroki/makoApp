@@ -1,7 +1,7 @@
 = render 'layouts/header'
 = render "./template/menu_selections"
 .menu-container
-  %h2 Boxlunch Menu
+  %h2#boxlunch-heading Boxlunch Menu
   .menu-contents
     - @boxlunches.each do |boxlunch|
       = form_for @cart, url: menu_carts_path(boxlunch), method: :post do |f|

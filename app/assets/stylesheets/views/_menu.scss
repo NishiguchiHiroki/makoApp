@@ -6,9 +6,9 @@
 .menu-package {
   margin: 0 30px;
 }
-  h2 {
+  #boxlunch-heading {
     @include h2-package;
-    border-bottom: none;
+    border-bottom:2px solid #7d2d00;
     margin-top: 20px;
 
     &::before{

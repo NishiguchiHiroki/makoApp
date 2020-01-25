@@ -3,13 +3,13 @@
 .menu-package {
   margin: 0 30px;
 }
-  h2 {
+  #drink-header {
     @include h2-package;
-    border-bottom: none;
+    border-bottom:2px solid #7d2d00;
     margin-top: 20px;
 
     &::before{
-    @include h2-before-package("../../image/drink-menu.png");
+    @include h2-before-package("drink-menu.jpeg");
   }
 }
 

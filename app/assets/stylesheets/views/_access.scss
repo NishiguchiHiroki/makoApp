@@ -9,7 +9,10 @@
 
   h2 {
     @include info-access-h2;
+    &::before{
+      display:none;
   }
+ }
 }
 
 .access-map-container {

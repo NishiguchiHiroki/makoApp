@@ -1,7 +1,7 @@
 = render 'layouts/header'
 = render "template/menu_selections"
 .menu-container
-  %h2 Reservation
+  %h2#reservation-heading Reservation
   .menu-contents
     - @reservations.each do |reservation|
       = form_for @cart, url: menu_carts_path(reservation), method: :post do |f|

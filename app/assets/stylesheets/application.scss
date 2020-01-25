@@ -12,11 +12,10 @@
  *
  *= require_self
  */
-
-
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+@import "config/colors";
+@import "modules/flash";
 
 @import "template/reset";
 @import "template/header";
@@ -24,6 +23,11 @@
 @import "template/aside";
 @import "template/footer";
 @import "template/mixin";
+@import "template/menu-contents";
+@import "template/menu-selection";
+@import "template/home-btn";
+@import "template/main-color";
+@import "template/template";
 
 // signinの始まり---------------------
 
@@ -51,22 +55,14 @@
 
 //  mypageの終わり-------------------
 
-
-@import "template/home-btn";
-@import "template/main-color";
-@import "template/template";
+@import "views/style";
 @import "views/access";
 @import "views/contact";
 @import "views/details";
-@import "views/drink-menu";
-@import "views/information";
 @import "views/menu";
-@import "views/reservation";
-@import "views/settlement";
 @import "views/single-menu";
-@import "template/menu-contents";
-@import "template/menu-selection";
-@import "views/style";
+@import "views/drink-menu";
+@import "views/reservation";
+@import "views/information";
+@import "views/settlement";
 
-@import "config/colors";
-@import "modules/flash";
